@@ -10,7 +10,7 @@ module.exports = async (user, author, reason) => {
 
   let u = await models.user.findOne({ id: user.id });
 
-  embed.addField('Strikes | ', u.strikes + 1);
+  embed.addField('Strikes | ', u.strikes + 1 || 1);
 
   user
     .send(embed)

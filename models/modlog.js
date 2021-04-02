@@ -5,6 +5,8 @@ let data = new Schema({
   tag: String,
   proofURL: String,
   reason: String,
+  rule: String,
+  moderator: String
 });
 
 module.exports = new model('modlog', data);
