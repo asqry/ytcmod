@@ -19,6 +19,15 @@ module.exports = {
       return;
     }
 
+    let newUser = new models.user({
+      id: target.id,
+      tag: target.user.tag,
+      strikes: 0,
+      messageCount: 0,
+    });
+
+    newUser.save()
+
     let embed = new MessageEmbed()
       .setColor(config.yellow)
       .setAuthor(message.author.tag, message.author.displayAvatarURL());

@@ -3,6 +3,7 @@ let config = require('../config');
 
 module.exports = async (message, client) => {
   if (message.author.bot) return;
+if(!message.content.startsWith('!')) return;
   let validGuild = client.guilds.cache.get(config.ytcID);
   if (message.guild.id !== validGuild.id) return;
   messageStats(message.author.id, message.author.tag);
