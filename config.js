@@ -57,5 +57,10 @@ module.exports = {
       reason: 'Harassing server members or staff.',
       points: 2,
     },
+	{
+emoji: '🔨',
+reason: 'Spamming in a raid-like way.'
+points: 3
+}
   ],
 };
